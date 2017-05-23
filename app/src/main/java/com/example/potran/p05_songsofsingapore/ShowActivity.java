@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 public class ShowActivity extends AppCompatActivity {
 
+
+
     ListView lvSongs;
     ArrayList<Song> songs;
     ArrayAdapter aaSongs;
@@ -18,7 +20,7 @@ public class ShowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
 
-        lvSongs = (ListView) findViewById(R.id.listViewSong);
+        lvSongs = (ListView) findViewById(R.id.lvSong);
         final DBHelper db = new DBHelper(ShowActivity.this);
 
         songs = db.getAllSongs();

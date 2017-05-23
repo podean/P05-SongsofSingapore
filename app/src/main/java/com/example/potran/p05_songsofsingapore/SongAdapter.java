@@ -52,7 +52,6 @@ public class SongAdapter extends ArrayAdapter{
             tvName.setText(currentsong.getTitle());
             tvArtist.setText(currentsong.getSingers());
             ivMusic.setImageResource(R.drawable.ic_library_music);
-
             return rowView;
         }
 
