@@ -41,10 +41,10 @@ public class SongAdapter extends ArrayAdapter{
             tvArtist.setText(currentsong.getSingers());
             return rowView;
         }
-        public taskAdapter(Context context, int resource, ArrayList<task> objects){
+        public songAdapter(Context context, int resource, ArrayList<Song> objects){
             super(context, resource, objects);
 
-            Task = objects;
+            songs = objects;
             this.context = context;
         }
     }
