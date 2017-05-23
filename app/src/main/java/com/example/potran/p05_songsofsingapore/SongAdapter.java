@@ -18,6 +18,11 @@ public class SongAdapter extends ArrayAdapter{
         private  TextView tvYear;
         private TextView tvName;
         private TextView tvArtist;
+    private ImageView ivStar1;
+    private ImageView ivStar2;
+    private ImageView ivStar3;
+    private ImageView ivStar4;
+    private ImageView ivStar5;
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
@@ -41,7 +46,8 @@ public class SongAdapter extends ArrayAdapter{
             tvArtist.setText(currentsong.getSingers());
             return rowView;
         }
-        public songAdapter(Context context, int resource, ArrayList<Song> objects){
+
+        public SongAdapter(Context context, int resource, ArrayList<Song> objects){
             super(context, resource, objects);
 
             songs = objects;
@@ -49,4 +55,3 @@ public class SongAdapter extends ArrayAdapter{
         }
     }
 
-}
