@@ -18,6 +18,12 @@ public class SongAdapter extends ArrayAdapter{
         private  TextView tvYear;
         private TextView tvName;
         private TextView tvArtist;
+    private ImageView ivMusic;
+    private ImageView ivStar1;
+    private ImageView ivStar2;
+    private ImageView ivStar3;
+    private ImageView ivStar4;
+    private ImageView ivStar5;
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
@@ -31,6 +37,12 @@ public class SongAdapter extends ArrayAdapter{
             tvYear = (TextView)rowView.findViewById(R.id.tvID);
             tvName = (TextView)rowView.findViewById(R.id.tvName);
             tvArtist = (TextView)rowView.findViewById(R.id.tvArtist);
+            ivStar1 = (ImageView)rowView.findViewById(R.id.ivStar1);
+            ivStar2 = (ImageView)rowView.findViewById(R.id.ivStar2);
+            ivStar3 = (ImageView)rowView.findViewById(R.id.ivStar3);
+            ivStar4 = (ImageView)rowView.findViewById(R.id.ivStar4);
+            ivStar5 = (ImageView)rowView.findViewById(R.id.ivStar5);
+            ivMusic = (ImageView)rowView.findViewById(R.id.ivMusic);
 
 
 
@@ -39,9 +51,12 @@ public class SongAdapter extends ArrayAdapter{
             tvYear.setText(currentsong.getYear());
             tvName.setText(currentsong.getTitle());
             tvArtist.setText(currentsong.getSingers());
+            ivMusic.setImageResource(R.drawable.ic_library_music);
+
             return rowView;
         }
-        public songAdapter(Context context, int resource, ArrayList<Song> objects){
+
+        public SongAdapter(Context context, int resource, ArrayList<Song> objects){
             super(context, resource, objects);
 
             songs = objects;
@@ -49,4 +64,3 @@ public class SongAdapter extends ArrayAdapter{
         }
     }
 
-}

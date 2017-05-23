@@ -11,6 +11,23 @@ import java.io.Serializable;
 public class Song implements Serializable {
     private int _id;
     private String title;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setSingers(String singers) {
+        this.singers = singers;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setStars(int stars) {
+        this.stars = stars;
+    }
+
     private String singers;
     private int year;
     private int stars;

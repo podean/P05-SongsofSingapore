@@ -39,14 +39,24 @@ public class ModifySong extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                DBHelper dbh = new DBHelper(ModifySong.this);
+                data.setTitle(etTitle.getText().toString());
+                data.setSingers(etSingers.getText().toString());
+                String year = etYear.getText().toString();
+                data.setYear(Integer.parseInt(year));
+                data.setStars(rgStars.getCheckedRadioButtonId());
+                dbh.updateSong(data);
+                dbh.close();
+                finish();
             }
         });
 
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                DBHelper dbh = new DBHelper(ModifySong.this);
+                dbh.deleteSong(data.get_id());
+                dbh.close();
             }
         });
 
