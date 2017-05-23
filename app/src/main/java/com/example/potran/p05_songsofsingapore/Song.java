@@ -35,10 +35,10 @@ public class Song implements Serializable {
         return stars;
     }
 
-    public Song(String title, String singers, int _id, int year, int stars){
+    public Song(String title, String singers, int year, int stars){
         this.title = title;
         this.singers = singers;
-        this._id = _id;
+
         this.stars = stars;
         this.year = year;
 
